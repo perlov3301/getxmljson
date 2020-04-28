@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xhr_dcode</title>
+    <link rel="stylesheet"  type="text/css"  href="dcode.scss"/>
+</head>
+<body>
+    <fieldset>
+        <legend>XMLHttpRequest - dcode</legend>
+        <div id="div"></div>
+    </fieldset>
+</body>
+<script type="text/javascript">
+    const xhr = new XMLHttpRequest();
+// 0=unsent 1=opened 2=received 3=loading 4=done
+  xhr.onreadystatechange = function() {
+      console.log("xhr.readyState=" + xhr.readyState);
+      if (xhr.readyState == 4) {
+  // status 200=>OK 400, 401, 404=>not found ;500 etc.
+      if (xhr.status == 200) {
+        console.log("response:" + xhr.responseText)
+      }
+      if (xhr.status ==404) {
+        console.log('File or resource not found');
+      }
+    }
+  };
+  xhr.open('get', './dom.txt', true);
+  console.log('something here');
+  xhr.send();
+    
+</script>
+</html>
