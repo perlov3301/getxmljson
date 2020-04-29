@@ -50,16 +50,16 @@
 // request body
   setTimeout(function() {
       xhr.onload = function () {
-        console.log('new onload;before all;readyState:' + xhr.readyState);
+        console.log('onload for post;before all;readyState:' + xhr.readyState);
         const serverResponse = document.getElementById('serverresponse');
         serverResponse.innerHtml = this.responseText;
     };
-      console.log('before open;readyState:' + xhr.readyState);
+      console.log('before open for post;readyState:' + xhr.readyState);
       xhr.open("POST", urlphp);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      console.log('before send;readyState:' + xhr.readyState);
+      console.log('before send for post;readyState:' + xhr.readyState);
       xhr.send("name=alex&message=how are you");
-      console.log('after send;readyState:' + xhr.readyState);
+      console.log('after send for post;readyState:' + xhr.readyState);
     }, 1000);
   
 </script>
