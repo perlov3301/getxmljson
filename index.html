@@ -49,17 +49,18 @@
   
 // request body
   setTimeout(function() {
-      xhr.onload = function () {
-        console.log('onload for post;before all;readyState:' + xhr.readyState);
+      const xhrpost = new XMLHttpRequest();
+      xhrpost.onload = function () {
+        console.log('onload for post;before all;readyState:' + xhrpost.readyState);
         const serverResponse = document.getElementById('serverresponse');
         serverResponse.innerHtml = this.responseText;
     };
-      console.log('before open for post;readyState:' + xhr.readyState);
-      xhr.open("POST", urlphp);
-      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      console.log('before send for post;readyState:' + xhr.readyState);
-      xhr.send("name=alex&message=how are you");
-      console.log('after send for post;readyState:' + xhr.readyState);
+      console.log('before open for post;readyState:' + xhrpost.readyState);
+      xhrpost.open("POST", urlphp);
+      xhrpost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      console.log('before send for post;readyState:' + xhrpost.readyState);
+      xhrpost.send("name=alex&message=how are you");
+      console.log('after send for post;readyState:' + xhrpost.readyState);
     }, 1000);
   
 </script>
