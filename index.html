@@ -50,7 +50,7 @@
     const serverResponse = document.getElementById('serverresponse');
     serverResponse.innerHtml = this.responseText;
   };
-  xhr.open("POST", 'dom.php');
+  xhr.open("POST", urlphp);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 // request body
   xhr.send("name=alex&message=how are you");
