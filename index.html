@@ -40,28 +40,29 @@
       }
     }
   };
-  console.log('before open;readyState:' + xhr.readyState);
+  console.log('before xhr.open;readyState:' + xhr.readyState);
   xhr.open('get', urltext, true);
   console.log('after open&before send; readyState:' + xhr.readyState);
   xhr.send();
-  console.log('after send;readyState:' + xhr.readyState);
+  console.log('after xhr.send;readyState:' + xhr.readyState);
     
   
 // request body
   setTimeout(function() {
       const xhrpost = new XMLHttpRequest();
       xhrpost.onload = function () {
-        console.log('onload for post;before all;readyState:' + xhrpost.readyState);
+        console.log('xhrpost.onload;readyState:' + xhrpost.readyState);
         const serverResponse = document.getElementById('serverresponse');
         serverResponse.innerHtml = this.responseText;
     };
-      console.log('before open for post;readyState:' + xhrpost.readyState);
+      console.log('before xhrpost.open;readyState:' + xhrpost.readyState);
       xhrpost.open("POST", urlphp);
       xhrpost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      console.log('before send for post;readyState:' + xhrpost.readyState);
+      console.log('before xhrpost.send;readyState:' + xhrpost.readyState);
       xhrpost.send("name=alex&message=how are you");
-      console.log('after send for post;readyState:' + xhrpost.readyState);
+      console.log(' after xhrpost.send;readyState:' + xhrpost.readyState);
     }, 1000);
-  
+  console.log(' after all;xhr.readyState:' + xhr.readyState);
+  console.log(' after all;xhrpost.readyState:' + xhrpost.readyState);
 </script>
 </html>
