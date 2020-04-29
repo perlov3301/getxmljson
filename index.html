@@ -18,7 +18,9 @@
 </body>
 <script type="text/javascript">
     const xhr = new XMLHttpRequest();
-    console.log('before all readyState:' + xhr.readyState);
+    const xhrpost = new XMLHttpRequest();
+    console.log('before all xhr.readyState:   ' + xhr.readyState);
+    console.log('before all xhrpost.readyState' + xhrpost.readyState);
     const urljson = 'https://perlov3301.github.io/getxmljson/wikijson.json';
     const urlxml = 'https://perlov3301.github.io/getxmljson/wikixml.xml';
     const urlabelski = 'https://perlov3301.github.io/getxmljson/abelski.xml';
@@ -26,17 +28,17 @@
     const urlphp =  'https://perlov3301.github.io/getxmljson/dom.php';
 // 0=unsent 1=opened 2=received 3=loading 4=done
   xhr.onreadystatechange = function() {
-      console.log("onreadystatechange;readyState=" + xhr.readyState);
+      console.log("onreadystatechange;xhr.readyState=" + xhr.readyState);
       if (xhr.readyState == 4) {
   // status 200=>OK 400, 401, 404=>not found ;500 etc.
       if (xhr.status == 200) {
-        console.log("response" + xhr.responseText);
+        console.log("xhr.responseText:" + xhr.responseText);
         document.getElementById('div').textContent = xhr.responseText;
         xhr.abort();
-        console.log('after aborting of responseText;readyState:' + xhr.readyState);
+        console.log('after xhr.abort();xhr.readyState:' + xhr.readyState);
       }
-      if (xhr.status ==404) {
-        console.log('File or resource not found');
+      if (xhr.status == 404) {
+        console.log('xhr.status=400;File or resource not found');
       }
     }
   };
@@ -49,7 +51,6 @@
   
 // request body
   setTimeout(function() {
-      const xhrpost = new XMLHttpRequest();
       xhrpost.onload = function () {
         console.log('xhrpost.onload;readyState:' + xhrpost.readyState);
         const serverResponse = document.getElementById('serverresponse');
@@ -57,12 +58,13 @@
     };
       console.log('before xhrpost.open;readyState:' + xhrpost.readyState);
       xhrpost.open("POST", urlphp);
+      console.log('after xhrpost.open;readyState:' + xhrpost.readyState);
       xhrpost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       console.log('before xhrpost.send;readyState:' + xhrpost.readyState);
       xhrpost.send("name=alex&message=how are you");
-      console.log(' after xhrpost.send;readyState:' + xhrpost.readyState);
+      console.log(' after xhrpost.send();xhr.readyState:' + xhr.readyState);
+      console.log(' after xhrpost.send();xhrpost.readyState:' + xhrpost.readyState);
     }, 1000);
-  console.log(' after all;xhr.readyState:' + xhr.readyState);
-  console.log(' after all;xhrpost.readyState:' + xhrpost.readyState);
+  
 </script>
 </html>
