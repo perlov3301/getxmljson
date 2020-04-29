@@ -45,6 +45,7 @@
   console.log('after open&before send; readyState:' + xhr.readyState);
   xhr.send();
   console.log('after send;readyState:' + xhr.readyState);
+    /*
   xhr.onload = function () {
     console.log('new onload;before all;readyState:' + xhr.readyState);
     const serverResponse = document.getElementById('serverresponse');
@@ -54,5 +55,6 @@
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 // request body
   xhr.send("name=alex&message=how are you");
+  */
 </script>
 </html>
