@@ -1,0 +1,14 @@
+html, body {
+    width: 90%;
+    margin: auto;
+}
+fieldset {
+    border: lightgray;
+    background-color: rgba(100, 125, 100, 0.3);
+    border-radius: 0.5em;
+}
+fieldset legend {
+    background-color:rgba(125, 125, 100, 0.89);
+    color: white;
+    border-radius: 0.3em;
+}
