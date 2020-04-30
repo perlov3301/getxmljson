@@ -30,6 +30,16 @@
                 "wikipedia": "https://en.wikipedia.org/wiki/MacOS",
                 "origin": "https://www.apple.com/il/macos/catalina/"
               }
+            },
+            {
+              "name": "Linux",
+              "developer": "Linus Benedict Torvalds",
+              "popular": true,
+              "initial_year": 1991,
+              "url": {
+                "wikipedia": "https://en.wikipedia.org/wiki/Linux",
+                "origin": "https://www.linux.org/pages/download/"
+              }
             }
       ]
 }
