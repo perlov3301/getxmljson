@@ -1,12 +1,35 @@
 {
-  [
-    "name": "wikipedia",
-    "country": "USA",
-    "popular": true,
-    "year": 1985,
-    "url": {
-      "wikipedia": "https://en.wikipedia.org/wiki/Microsoft_Windows",
-      "original": "https://www.microsoft.com/en-us/windows"
-    }
-  ]
+  "OS":
+      [
+        {
+          "name": "Windows",
+          "developer": "Microsoft",
+          "popular": true,
+          "initial_year": 1985,
+          "url": {
+            "wikipedia": "https://en.wikipedia.org/wiki/Microsoft_Windows",
+            "origin": "https://www.microsoft.com/en-us/windows"
+            }
+          },
+           {
+             "name": "Mac OS",
+             "developer": "Apple Compurter",
+             "popular": false,
+             "initial_year": 1984,
+              "url": {
+                 "wikipedia": "https://en.wikipedia.org/wiki/Classic_Mac_OS",
+                 "origin": "https://apple.fandom.com/wiki/Mac_OS_9"
+               }
+            },
+            {
+              "name": "macOS",
+              "developer": "Apple Compurter",
+              "popular": true,
+              "initial_year": 2001,
+              "url": {
+                "wikipedia": "https://en.wikipedia.org/wiki/MacOS",
+                "origin": "https://www.apple.com/il/macos/catalina/"
+              }
+            }
+      ]
 }
