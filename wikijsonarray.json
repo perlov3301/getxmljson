@@ -1,54 +1,86 @@
-{
-  [
-    {
-  "id": "q1234",
-  "firstName": "John",
-  "lastName": "Smith",
-  "isAlive": true,
-  "age": 27,
-  "address": {
-    "streetAddress": "21 2nd Street",
-    "city": "New York",
-    "state": "NY",
-    "postalCode": "10021-3100"
-  },
-  "phoneNumbers": [
-    {
-      "type": "home",
-      "number": "212 555-1234"
-    },
-    {
-      "type": "office",
-      "number": "646 555-4567"
-    }
-  ],
-  "children": [],
-  "spouse": null
-},
-{
-  "id": "a12345",
-  "firstName": "Lara",
-  "lastName": "Wine",
-  "isAlive": true,
-  "age": 26,
-  "address": {
-    "streetAddress": "156str. 156E apt.2342",
-    "city": "Cleveland",
-    "state": "Ohio",
-    "postalCode": "44110-234"
-  },
-  "phoneNumbers": [
-    {
-      "type": "home",
-      "number": "212 555-1234"
-    },
-    {
-      "type": "office",
-      "number": "646 555-4567"
-    }
-  ],
-  "children": ["a", "b"],
-  "spouse": null
-}
-  ]
+{ "myjson":
+    [
+      {
+        "id": "q1234",
+        "firstName": "John",
+        "lastName": "Smith",
+        "isAlive": true,
+        "age": 27,
+        "address": 
+          {
+            "streetAddress": "21 2nd Street",
+            "city": "New York",
+            "state": "NY",
+            "postalCode": "10021-3100"
+          },
+        "phoneNumbers": 
+          [
+            {
+              "type": "home",
+              "number": "212 555-1234"
+            },
+            {
+              "type": "office",
+              "number": "646 555-4567"
+            }
+          ],
+        "children": [],
+        "spouse": null
+      },
+      {
+        "id": "p1234",
+        "firstName": "Dohn",
+        "lastName": "Zmith",
+        "isAlive": true,
+        "age": 26,
+        "address": 
+          {
+            "streetAddress": "22e 2nd Street",
+            "city": "New York",
+            "state": "Pensilvania",
+            "postalCode": "20021-3101"
+          },
+        "phoneNumbers": 
+          [
+            {
+              "type": "home",
+              "number": "312 555-1234"
+            },
+            {
+              "type": "office",
+              "number": "846 555-4567"
+            }
+          ],
+        "children": ["Stone","Glane"],
+        "spouse": "mary"
+      },
+      {
+        "id": "o1234",
+        "firstName": "Balohn",
+        "lastName": "Amith",
+        "isAlive": true,
+        "age": 39,
+        "address": 
+          {
+            "streetAddress": "121w 3nd Street",
+            "city": "New York",
+            "state": "NY",
+            "postalCode": "10021-3100"
+          },
+        "phoneNumbers": 
+          [
+            {
+              "type": "home",
+              "number": "212 555-1234"
+            },
+            {
+              "type": "office",
+              "number": "646 555-4567"
+            }
+          ],
+        "children": [],
+        "spouse": null
+      }
+      
+    ]
 }
