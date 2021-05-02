@@ -1,5 +1,6 @@
 {
-  "name": "John",
+  "name1": "John",
+  "name2": "Leanne Graham",
   "lastName": "Smith",
   "isAlive": true,
   "age": 27,
